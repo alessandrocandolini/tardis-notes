@@ -1,0 +1,60 @@
+\documentclass[onecolumn,a4paper,11pt]{article}
+\usepackage{jheppub}
+\makeatletter
+\def\@fpheader{\today}
+\makeatother
+\pdfoutput=1
+
+% *****************************************************************************
+% Main packages
+% *****************************************************************************
+\usepackage[english]{babel}       % Language hyphenation and translations 
+\usepackage[babel]{csquotes}      % Recommended when using biblatex
+
+\usepackage{graphicx}             % Standard package to load images 
+
+\usepackage[final]{microtype}     % Typographic refinements
+
+\usepackage{subfig}               % Multiple figures.
+\usepackage{url}                  % Url
+
+% *****************************************************************************
+% BIBLaTeX
+% *****************************************************************************
+\usepackage[%
+style=philosophy-verbose,%
+scauthorsbib,%
+hyperref,backref,%
+backend=biber,%
+firstinits=true,%
+ibidtracker=true]{biblatex}
+
+\addbibresource{bibliography.bib}
+
+% *****************************************************************************
+% Quoting 
+% *****************************************************************************
+
+\usepackage[font=small, noorphanfirst, indentfirst=false]{quoting}
+
+
+\input{setup}
+
+\title{Time travelling for dynamic programming}
+\author{Alessandro Candolini}
+\affiliation{London, UK}
+\emailAdd{alessandro.candolini@gmail.com}
+\date{\today}
+\abstract{%
+The call-by-need evaluation strategy of the Haskell programming language enables program constructors.
+This note is an exploration of how the Tardis monad can be used to achieve an efficient solution of the classic problem of finding the maximum subsequence of length $k$ in an array of length $n >= k$, a problem traditionally solve with dynamic programming.
+I argue that the Tardis monad leads to a style of programming where performance and readability coexists: the solution requires a single traversal of the input list, while the algorith is break down in parts that resable the high level understanding
+}
+\begin{document}
+\maketitle
+
+\section{Overview}
+\label{sec:overview}
+
+\printbibliography
+\end{document}

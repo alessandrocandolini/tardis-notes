@@ -1,0 +1,31 @@
+
+# automatically-generated biblatex files
+*.bbl
+*.bcf
+*.blg
+
+# automatically-generated latex files
+*.aux
+*.idx
+*.ilg
+*.ind
+*.out
+*.pre
+*.toc
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.fot
+*.log
+*.pdf
+
+# automatically-generated asymptote files
+stirling-*.asy
+stirling-*.tex
+stirling-*_0.pdf
+
+# other files
+*.swp
+.metadata
+*.DS_Store
+
