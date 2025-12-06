@@ -52,7 +52,7 @@ One notable example is the bidirectional state monad known as the \emph{Tardis m
 
 This note explores how the Tardis monad can be employed to implement an efficient solution to the classical problem of computing the lexicographically maximum subsequence of fixed length $k$ in an array of length $n \geq k$.
 The goal is to contribute to the literature of practical usages of the Tardis monad and to support the thesis that (for the class of problems where the technique is applicable) the Tardis monad promotes a style of programming in which performance and clarity coexist: the solution performs only a single pass over the input sequence, while the structure of the algorithm closely mirrors the intuitive high-level reasoning behind the problem, rather than the more technical formulations typically found in dynamic programming treatments.
-The readability gains are nevertheless bound by the imperative interface of the Tardis monad, and setting the past or future state can also be error-prone.
+The readability gains are nevertheless bound by the limitations of working with an imperative interface: setting the past or future state can be error-prone, and bugs can still be subtle to track at times.
 The problem considered here was motivated by Advent of Code~2025, Day~3
 \footnote{See \url{https://adventofcode.com/2025/day/3}}.
 }
