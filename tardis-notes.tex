@@ -47,11 +47,11 @@ ibidtracker=true]{biblatex}
 \date{\today}
 \abstract{%
 The call-by-need evaluation strategy of the Haskell programming language enables somewhat ``exotic'' program constructions.
-One notable example is the bidirectional state monad known as the Tardis monad%
+One notable example is the bidirectional state monad known as the \emph{Tardis monad}%
 \footnote{See \url{https://hackage.haskell.org/package/tardis}}.
 
 This note explores how the Tardis monad can be employed to implement an efficient solution to the classical problem of computing the lexicographically maximum subsequence of fixed length $k$ in an array of length $n \geq k$.
-The goal is to contribute to the literature of practical usages of the Tardis monad and to support the thesis that the Tardis monad promotes a style of programming in which performance and clarity coexist: the solution performs only a single pass over the input sequence, while the structure of the algorithm closely mirrors the intuitive high-level reasoning behind the problem, rather than the more technical formulations typically found in dynamic programming treatments.
+The goal is to contribute to the literature of practical usages of the Tardis monad and to support the thesis that (for the class of problems where the technique is applicable) the Tardis monad promotes a style of programming in which performance and clarity coexist: the solution performs only a single pass over the input sequence, while the structure of the algorithm closely mirrors the intuitive high-level reasoning behind the problem, rather than the more technical formulations typically found in dynamic programming treatments.
 The readability gains are nevertheless bound by the imperative interface of the Tardis monad, and setting the past or future state can also be error-prone.
 The problem considered here was motivated by Advent of Code~2025, Day~3
 \footnote{See \url{https://adventofcode.com/2025/day/3}}.
