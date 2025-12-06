@@ -46,15 +46,46 @@ ibidtracker=true]{biblatex}
 \emailAdd{alessandro.candolini@gmail.com}
 \date{\today}
 \abstract{%
-The call-by-need evaluation strategy of the Haskell programming language enables program constructors.
-This note is an exploration of how the Tardis monad can be used to achieve an efficient solution of the classic problem of finding the maximum subsequence of length $k$ in an array of length $n >= k$, a problem traditionally solve with dynamic programming.
-I argue that the Tardis monad leads to a style of programming where performance and readability coexists: the solution requires a single traversal of the input list, while the algorith is break down in parts that resable the high level understanding
+The call-by-need evaluation strategy of the Haskell programming language enables somewhat ``exotic'' program constructions.
+One notable example is the bidirectional state monad going under the evocative name of ``Tardis'' monad%
+\footnote{See \url{https://hackage.haskell.org/package/tardis}}.
+This note is an exploration of how the Tardis monad can be successfully employed to implement an efficient solution to the classic problem of finding the maximum subsequence of length $k$ in an array of length $n \geq  k$.
+I'll try to convey the argument that the Tardis monad leads to a style of programming where performance and readability coexists: the solution requires a single traversal of the input list, while the algorith is broken down in parts that resamble the high-level intuitive thinking of the solution, as oppose to the technicalities of the more traditional solutions found in dynamic programming textbooks.
+The problem was inspired by advent of code 2025, day~3%
+\footnote{See \url{https://adventofcode.com/2025/day/3}}.
 }
 \begin{document}
 \maketitle
 
-\section{Overview}
-\label{sec:overview}
+\section{Preliminary mathematical definitions}
+\label{sec:definitions}
+
+Hereafter, $\N$ and $\Z$ denote the set of natural and integer numbers respectively. By convention, $\N$ will include also the element $0$. To avoid confusion, $\N\backslash\{0\}$ will be used to denote explicitly the set of strictly positive integer numbers.
+
+\begin{definition}[sequence]
+  Given $n\in\N$ and an arbitrary set $A$, a ``finite sequence'' of length $n$ elements of $A$ is any function $[0, n[ \rightarrow A$.
+\end{definition}
+
+In words, a (finite) sequence is any function whose domain is a (finite) interval of natural numbers. The definition can be extended in several ways, none of which are relevant for these handouts. Extensions include: infinite sequences defined as functions $\N\rightarrow A$; functions on (intervals of) $\Z$
+
+
+A finite sequence of length $n$ of elements of $A$ is commonly denoted with $(a_i)_{i \in [0, n[}$, or when $n$ is clear from the context, more syntetically $(a_i)_i$. The usual notatin for functions $a(n)$ is less often for sequences.
+
+Sometimes, it can be convenient to ``visualise'' the sequence with notations like the following:
+\begin{dmath*}
+  [a_0, a_1, \ldots , a_{n-1}]
+\end{dmath*}
+
+\begin{definition}[subsequence]
+  They are given $n\in\N$, a set $A$, and a sequence $(a_i)_i$ of length $n$ of elements of $A$.
+  A subsequence of $(a_i)_i$A is any sequence $(a_{i_k})_k$ where $i_k$ is a \emph{strictly increasing sequence of positive integers}.
+\end{definition}
+
+\section{Problem statement}
+\label{sec:problem}
+
+\section{The Tardis monad}
+\label{sec:tardis}
 
 \printbibliography
 \end{document}
